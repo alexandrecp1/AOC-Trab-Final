@@ -1,2 +1,7 @@
 # AOC-Trab-Final
-Trabalho feito em VHDL
+
+Trabalho Arquitetura e Organização de Computadores - UFPEL
+Guessing Game Assembly (MARS).
+
+Copilar o codigo e digitar apartir do console.
+O mesmo irá citar como jogar.
