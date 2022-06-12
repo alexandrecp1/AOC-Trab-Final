@@ -2,14 +2,14 @@
 intro: .asciiz "Bem vindo ao Guessing Game!\n" 
 nome_digitado: .asciiz "Por favor jogador, digite seu nome aqui:\n"
 saudacao: .asciiz "Opa, "
-digitar_numero: .asciiz "Para lhe ajudar nesta jornada, digite um numero de 100 à 200 para facilitar as casas que o numero será sorteado :\n"
+digitar_numero: .asciiz "Para lhe ajudar nesta jornada, digite um numero de 100 Ã  200 para facilitar as casas que o numero serÃ¡ sorteado :\n"
 explicacao: .asciiz "Numero sorteado, tente adivinhar. Boa sorte!\n"
-prox_numero: .asciiz "Digite o número:\n"
+prox_numero: .asciiz "Digite o nÃºmero:\n"
 alto: .asciiz "Muito alto, talvez mais baixo. \n"
 baixo: .asciiz "Muito baixo, talvez mais alto. \n"
 end1: .asciiz "Parabens! "
-end2: .asciiz "Você venceu o desafio. "
-end3: .asciiz " foi o total de tentativas para acertar o número."
+end2: .asciiz "VocÃª venceu o desafio. "
+end3: .asciiz " foi o total de tentativas para acertar o nÃºmero."
 
 .macro assign_constant (%destination, %constant)
 li %destination, %constant
@@ -28,7 +28,7 @@ add %destination, %value_address, $zero
 .macro exit(%exit_status)
 li $a0, %exit_status
 set_syscall(17)
-syscall #Faz a exeução e puxa.
+syscall #Faz a exeuÃ§Ã£o e puxa.
 .end_macro
 
 #Status de saida "0"
@@ -118,7 +118,7 @@ assign_constant($t4, 0)
 loop:
     input_int(prox_numero, $t3)
     addiu $t4, $t4, 1 #Implementa a contagem
-    sub $t3, $t3, $t2 #t3 = t3 - t2 (calculo de subtração)
+    sub $t3, $t3, $t2 #t3 = t3 - t2 (calculo de subtraÃ§Ã£o)
     beq $t3,$0, endloop #Para o loop se for diferente de 0
     bgez $t3, greater #Se for diferente > 0, executa.
     print_variable(baixo)
